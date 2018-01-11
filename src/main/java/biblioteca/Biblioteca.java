@@ -14,8 +14,8 @@ public class Biblioteca {
 
     public static void displayAllBooks(PrintStream printStream) {
         StringBuilder booksDisplay = new StringBuilder();
-        for (Book b : books){
-            booksDisplay.append(b.title + " by " + b.author + " in " + b.yearPublished + "\n");
+        for (Book b: books){
+            booksDisplay.append(b.toString());
         }
         printStream.println(booksDisplay.toString());
     }
@@ -28,6 +28,5 @@ public class Biblioteca {
         displayWelcomeMessage(printStream);
         displayAllBooks(printStream);
     }
-
 
 }

@@ -13,7 +13,7 @@ public class Book {
         this.yearPublished = yearPublished;
     }
 
-    public void displayTitle(PrintStream printStream) {
-        printStream.println(title);
+    public String toString() {
+        return title + " by " + author + " in " + yearPublished + "\n";
     }
 }
