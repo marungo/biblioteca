@@ -24,6 +24,13 @@ public class BibliotecaTest {
     }
 
     @Test
+    public void testWelcomeMessageDisplays() {
+        Biblioteca.displayWelcomeMessage(printStream);
+        String message = "Welcome to biblioteca! We are open for service.";
+        verify(printStream).println(message);
+    }
+
+    @Test
     public void shouldDisplayAllBooksInList(){
         Biblioteca.displayAllBooks(printStream);
         String listOfBooks = "The Odyssey by Homer in 100AD\nThe Chamber of Secrets by JK Rowling in 1997\n";

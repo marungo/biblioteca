@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class Biblioteca {
     private static PrintStream printStream = System.out;
-
     private static ArrayList<Book> books = new ArrayList<>();
 
     public static void addBook(String title, String author, String yearPublished) {
@@ -14,22 +13,20 @@ public class Biblioteca {
     }
 
     public static void displayAllBooks(PrintStream printStream) {
-
         StringBuilder booksDisplay = new StringBuilder();
-
-        //        String listOfBooks = "The Odyssey by Homer in 100AD\nThe Chamber of Secrets by JK Rowling in 1997\n";
         for (Book b : books){
             booksDisplay.append(b.title + " by " + b.author + " in " + b.yearPublished + "\n");
-
         }
-
         printStream.println(booksDisplay.toString());
-
     }
-    public static void main(String[] args) {
-        Welcome.displayWelcomeMessage(Biblioteca.printStream);
 
-        Biblioteca.displayAllBooks(printStream);
+    public static void displayWelcomeMessage(PrintStream printStream) {
+        printStream.println("Welcome to biblioteca! We are open for service.");
+    }
+
+    public static void main(String[] args) {
+        displayWelcomeMessage(printStream);
+        displayAllBooks(printStream);
     }
 
 
