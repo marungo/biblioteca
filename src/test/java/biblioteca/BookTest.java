@@ -19,19 +19,14 @@ public class BookTest {
     public void setUp() throws Exception {
         printStream = mock(PrintStream.class);
         bufferedReader = mock(BufferedReader.class);
-        book = new Book("The Odyssey");
+        book = new Book("The Odyssey","Homer", "100AD");
     }
 
     @Test
-    public void bookDisplaysTitle(){
+    public void shouldDisplayBookTitle(){
         String message = "The Odyssey";
         book.displayTitle(printStream);
         verify(printStream).println(message);
-    }
-
-    @Test
-    public void bookDisplaysDetails(){
-        String message = "The Oddyssey, Homer, "
     }
 
 
