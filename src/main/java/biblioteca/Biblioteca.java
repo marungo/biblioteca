@@ -20,7 +20,6 @@ public class Biblioteca {
     }
 
     public void run() {
-        BibliotecaApp.displayWelcomeMessage(BibliotecaApp.printStream);
         setUp();
         displayAllBooks(BibliotecaApp.printStream);
     }

@@ -7,6 +7,7 @@ public class BibliotecaApp {
     static PrintStream printStream = System.out;
 
     public static void main(String[] args) {
+        displayWelcomeMessage(printStream);
         MainMenu mainMenu = new MainMenu();
         mainMenu.display(printStream);
         Biblioteca biblioteca = new Biblioteca();
