@@ -35,8 +35,6 @@ public class Biblioteca {
         displayAllBooks(printStream);
     }
 
-    public static void main(String[] args) {
-        run();
-    }
+
 
 }
