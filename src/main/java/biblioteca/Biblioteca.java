@@ -26,9 +26,14 @@ public class Biblioteca {
 
     public void run() {
         displayWelcomeMessage(printStream);
+        setUp();
         displayAllBooks(printStream);
     }
 
+    private void setUp() {
+        addBook("The Odyssey", "Homer", "100AD");
+        addBook("The Chamber of Secrets", "JK Rowling", "1997");
+    }
 
 
 }

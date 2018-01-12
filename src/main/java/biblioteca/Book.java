@@ -14,6 +14,6 @@ public class Book {
     }
 
     public String toString() {
-        return title + " by " + author + " in " + yearPublished + "\n";
+        return title + " | " + author + " | " + yearPublished + "\n";
     }
 }
