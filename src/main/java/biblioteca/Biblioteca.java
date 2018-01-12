@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Biblioteca {
     private static PrintStream printStream = System.out;
-    private static ArrayList<Book> books = new ArrayList<>();
+    public static ArrayList<Book> books = new ArrayList<>();
 
     public static void addBook(String title, String author, String yearPublished) {
         Book b = new Book(title, author, yearPublished);
@@ -24,9 +24,19 @@ public class Biblioteca {
         printStream.println("Welcome to biblioteca! We are open for service.");
     }
 
-    public static void main(String[] args) {
+    public static void setUp() {
+        addBook("The Odyssey", "Homer", "100AD");
+        addBook("The Chamber of Secrets", "JK Rowling", "1997");
+    }
+
+    public static void run() {
+        setUp();
         displayWelcomeMessage(printStream);
         displayAllBooks(printStream);
+    }
+
+    public static void main(String[] args) {
+        run();
     }
 
 }
