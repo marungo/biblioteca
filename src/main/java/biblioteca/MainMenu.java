@@ -1,5 +1,7 @@
 package biblioteca;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
@@ -32,8 +34,15 @@ public class MainMenu {
         printStream.println(result.toString());
     }
 
+
+
     public void select(String option) {
         if(option.equals("List Books"))
             biblioteca.run();
+    }
+
+    public void recieveOption(BufferedReader bufferReader) throws IOException {
+        String option  = bufferReader.readLine();
+        select(option);
     }
 }

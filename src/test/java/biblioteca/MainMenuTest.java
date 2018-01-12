@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintStream;
 
 import static org.hamcrest.core.Is.is;
@@ -32,15 +33,12 @@ public class MainMenuTest {
     }
 
 //    @Test
-//    public void shouldRunBibliotecaWhenListBooksIsSelected(){
-//        MainMenu menu = new MainMenu(biblioteca);
+//    public void whenListBooksOptionSelectedDisplayBooks() throws IOException {
+//        when(bufferedReader.readLine()).thenReturn("List Books");
+//        when(biblioteca.displayAllBooks(printStream)).thenReturn("The Odyssey | Homer | 100AD\nThe Chamber of Secrets | JK Rowling | 1997\n");
+//        MainMenu mainmenu = mock(MainMenu.class);
+//        mainmenu.recieveOption(bufferedReader);
 //
-//        String option = "List Books";
-//        menu.select(option);
-//
-//        verify(biblioteca).run();
+//        verify(biblioteca,times(1)).displayAllBooks(printStream);
 //    }
-
-
-
 }
