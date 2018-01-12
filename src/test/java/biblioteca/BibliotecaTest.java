@@ -7,15 +7,12 @@ import org.junit.Test;
 import java.io.BufferedReader;
 import java.io.PrintStream;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 public class BibliotecaTest {
     private static PrintStream printStream;
     private static BufferedReader bufferedReader;
-    private Book book;
 
     @BeforeClass
     public static void setUp() throws Exception {
