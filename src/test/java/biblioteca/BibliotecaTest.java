@@ -35,7 +35,7 @@ public class BibliotecaTest {
     @Test
     public void shouldDisplayAllBooksInList(){
         biblioteca.displayAllBooks(printStream);
-        String listOfBooks = "The Odyssey by Homer in 100AD\nThe Chamber of Secrets by JK Rowling in 1997\n";
+        String listOfBooks = "The Odyssey | Homer | 100AD\nThe Chamber of Secrets | JK Rowling | 1997\n";
         verify(printStream).println(listOfBooks);
     }
 
