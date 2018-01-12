@@ -3,6 +3,7 @@ package biblioteca;
 public class BibliotecaApp {
 
     public static void main(String[] args) {
-        Biblioteca.run();
+        Biblioteca biblioteca = new Biblioteca();
+        biblioteca.run();
     }
 }

@@ -19,7 +19,6 @@ public class MainMenuTest {
     public static void setUp() throws Exception {
         printStream = mock(PrintStream.class);
         bufferedReader = mock(BufferedReader.class);
-        Biblioteca.setUp();
     }
 
     @Test
