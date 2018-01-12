@@ -5,8 +5,10 @@ import java.util.ArrayList;
 
 public class MainMenu {
     private ArrayList<String> options;
+    private Biblioteca biblioteca;
 
-    public MainMenu() {
+    public MainMenu(Biblioteca biblioteca) {
+        this.biblioteca = biblioteca;
         options = new ArrayList<>();
         options.add("List Books");
     }
@@ -22,5 +24,10 @@ public class MainMenu {
             result.append("\t"+ option + "\n");
         }
         printStream.println(result.toString());
+    }
+
+    public void select(String option) {
+        if(option.equals("List Books"))
+            biblioteca.run();
     }
 }

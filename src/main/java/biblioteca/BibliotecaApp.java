@@ -8,10 +8,12 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         displayWelcomeMessage(printStream);
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.display(printStream);
         Biblioteca biblioteca = new Biblioteca();
-        biblioteca.run();
+        MainMenu mainMenu = new MainMenu(biblioteca);
+        mainMenu.display(printStream);
+
+
+        //biblioteca.run();
 
     }
 
