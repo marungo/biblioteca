@@ -24,7 +24,7 @@ public class BibliotecaTest {
     }
 
     @Test
-    public void testWelcomeMessageDisplays() {
+    public void shouldDisplayWelcomeMessage() {
         Biblioteca.displayWelcomeMessage(printStream);
         String message = "Welcome to biblioteca! We are open for service.";
         verify(printStream).println(message);
