@@ -1,7 +1,6 @@
 package biblioteca;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -25,12 +24,7 @@ public class BibliotecaTest {
 
     }
 
-    @Test
-    public void shouldDisplayWelcomeMessage() {
-        Biblioteca.displayWelcomeMessage(printStream);
-        String message = "Welcome to biblioteca! We are open for service.";
-        verify(printStream).println(message);
-    }
+
 
     @Test
     public void shouldDisplayAllBooksInList(){

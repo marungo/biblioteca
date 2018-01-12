@@ -4,7 +4,6 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class Biblioteca {
-    private static PrintStream printStream = System.out;
     public ArrayList<Book> books = new ArrayList<>();
 
     public void addBook(String title, String author, String yearPublished) {
@@ -20,14 +19,10 @@ public class Biblioteca {
         printStream.println(booksDisplay.toString());
     }
 
-    public static void displayWelcomeMessage(PrintStream printStream) {
-        printStream.println("Welcome to biblioteca! We are open for service.");
-    }
-
     public void run() {
-        displayWelcomeMessage(printStream);
+        BibliotecaApp.displayWelcomeMessage(BibliotecaApp.printStream);
         setUp();
-        displayAllBooks(printStream);
+        displayAllBooks(BibliotecaApp.printStream);
     }
 
     private void setUp() {
