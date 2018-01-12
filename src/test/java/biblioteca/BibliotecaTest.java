@@ -38,11 +38,6 @@ public class BibliotecaTest {
         verify(printStream).println(listOfBooks);
     }
 
-    @Test
-    public void shouldContainListOfBooks(){
-        MainMenu mainMenu = new MainMenu();
-        Boolean result = mainMenu.getOptions().contains("List Books");
-        assertThat(result, is(true));
-    }
+
 
 }
