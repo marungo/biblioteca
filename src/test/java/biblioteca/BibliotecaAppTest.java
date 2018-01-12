@@ -16,4 +16,5 @@ public class BibliotecaAppTest {
         String message = "Welcome to biblioteca! We are open for service.";
         verify(printStream).println(message);
     }
+
 }

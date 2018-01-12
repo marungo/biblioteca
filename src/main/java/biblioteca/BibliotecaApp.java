@@ -9,8 +9,8 @@ public class BibliotecaApp {
     public static void main(String[] args) {
         displayWelcomeMessage(printStream);
         Biblioteca biblioteca = new Biblioteca();
-        MainMenu mainMenu = new MainMenu(biblioteca);
-        mainMenu.display(printStream);
+        MainMenu mainMenu = new MainMenu(biblioteca, printStream);
+        mainMenu.start();
 
 
         //biblioteca.run();

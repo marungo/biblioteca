@@ -6,18 +6,24 @@ import java.util.ArrayList;
 public class MainMenu {
     private ArrayList<String> options;
     private Biblioteca biblioteca;
+    private PrintStream printStream;
 
-    public MainMenu(Biblioteca biblioteca) {
+    public MainMenu(Biblioteca biblioteca, PrintStream printStream) {
         this.biblioteca = biblioteca;
+        this.printStream = printStream;
         options = new ArrayList<>();
         options.add("List Books");
     }
 
-    public ArrayList<String> getOptions() {
+    private ArrayList<String> getOptions() {
         return options;
     }
 
-    public void display(PrintStream printStream) {
+    public void start(){
+        displayOptions(printStream);
+    }
+
+    private void displayOptions(PrintStream printStream) {
         StringBuilder result = new StringBuilder();
         result.append("Main Menu\n");
         for(String option : options){
